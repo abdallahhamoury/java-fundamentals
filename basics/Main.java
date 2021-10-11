@@ -23,7 +23,7 @@ public class Main {
 
     flipNHeads(1);
     clock();
-    reverseArray(array)
+    // reverseArray(array);
   }
 
   // Functions that return nothing have a return type of "void"
@@ -71,4 +71,7 @@ public class Main {
   }
 
 
+
 }
+
+
