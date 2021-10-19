@@ -5,6 +5,15 @@ public class Review {
     private String body;
     private String author;
     private int star;
+    private String movie;
+
+    public String getMovie() {
+        return movie;
+    }
+
+    public void setMovie(String movie) {
+        this.movie = movie;
+    }
 
     public String getBody() {
         return body;
@@ -34,6 +43,12 @@ public class Review {
         this.body = body;
         this.author =author;
         this.star = star;
+    }
+    public Review(String body, String author, int star,String movie){
+        this.body = body;
+        this.author =author;
+        this.star = star;
+        this.movie= movie;
     }
     public String toString(){
         String comments = " comments : " + this.body + " / "+ " name : " + this.author + " start * " + this.star;
