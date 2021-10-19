@@ -1,3 +1,4 @@
+
 # java-fundamentals
 
 ## Table of content:
@@ -38,3 +39,4 @@ tally a function that accepts a List of Sword and a number and returns a string 
 linter - App.java
 1. [linter](./linter/app/src/main/java/linter/App.java)
    checkErr a function that that reads a JavaScript file in a certain path and generates an emi-colon; {; Don’t show an error if the line ends with an closing curly brace }; Don’t show an error if the line contains if or else;
+

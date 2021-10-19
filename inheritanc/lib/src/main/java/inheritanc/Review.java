@@ -1,4 +1,5 @@
-package inheritance;
+package inheritanc;
+
 
 public class Review {
     private String body;
@@ -35,7 +36,7 @@ public class Review {
         this.star = star;
     }
     public String toString(){
-        String comments = "comments" + this.body + "name" + this.author + "start*" + this.star;
+        String comments = " comments : " + this.body + " / "+ " name : " + this.author + " start * " + this.star;
         return comments;
     }
     public String test (){

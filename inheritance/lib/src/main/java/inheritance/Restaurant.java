@@ -3,9 +3,33 @@ package inheritance;
 import java.util.ArrayList;
 
 public class Restaurant {
-    String name;
-    double countStar;
-    double price;
+    private String name;
+    private double countStar;
+    private double price;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getCountStar() {
+        return countStar;
+    }
+
+    public void setCountStar(double countStar) {
+        this.countStar = countStar;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     ArrayList<Review> reviewArrayList = new ArrayList<>();
 
@@ -20,11 +44,14 @@ public class Restaurant {
      }
      public double addReview(String body,String author,int countstar){
         Review review = new Review(body,author,countstar);
-        reviewArrayList.add(review);
-        this.countStar = (this.countStar+review.star)/2;
+        reviewArrayList.getClass();
+        this.countStar = (this.getCountStar()+review.getStar())/2;
          System.out.println(review.test());
          return this.countStar;
      }
 
 
+    public class ArrayList<T> {
+        ArrayList<Review> reviewArrayList = new ArrayList<>();
+    }
 }
