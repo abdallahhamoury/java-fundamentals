@@ -40,3 +40,17 @@ linter - App.java
 1. [linter](./linter/app/src/main/java/linter/App.java)
    checkErr a function that that reads a JavaScript file in a certain path and generates an emi-colon; {; Don’t show an error if the line ends with an closing curly brace }; Don’t show an error if the line contains if or else;
 
+----------------------------------------------------------------------------------
+
+# Composition
+
+# Library
+
+library.java : the driver file and is used to run the functions from Restaurant.java.
+Restaurant.java : the class that we Inherit from it.
+Review.java : a class that it used to Inherit sub classed for the "addReview" function.
+Theater.java : for Theater.
+
+a test to create an instad ensure that its tng properly.
+test to create an instance of its toString is working properly.
+tests to ensure that when you call addReview, 

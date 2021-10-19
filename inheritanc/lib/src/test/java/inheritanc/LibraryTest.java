@@ -5,10 +5,93 @@ package inheritanc;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
+//    @Test void testResToString() {
+//        Restaurant r1 = new Restaurant("mac",5,"low");
+//        System.out.println(r1.toString());
+//        String note = r1.toString();
+//        assertEquals("Restaurant: mac \n" +
+//                " rating : 5.0 \n" +
+//                " price category: low$",note);
+//    }
+//
+//
+//    @Test void testReviewToString() {
+//        Review r1 = new Review("bad","malik",2);
+//        System.out.println(r1.toString());
+//        String note = r1.toString();
+//        assertEquals("rating : bad \n" +
+//                " Clint name: abdallah \n" +
+//                " rating with stars is : 2",note);
+//
+//
+//
+//    }
+
+//    @Test void testAssociated() {
+//        Restaurant r1 = new Restaurant("bad", 5, "high");
+//        r1.addReview("good","mazen",5);
+//        r1.addReview("bad","majed",1);
+//        r1.reviewList.toString();
+//    }
+//
+//
+//    @Test void testAddReview(){
+//        Restaurant r1 = new Restaurant("mac",0,"low");
+//        Review r2 = new Review("good","abdallah",4);
+//
+//        r1.addReview("good","abd",4);
+//        String note =r1.toString();
+//        System.out.println(note);
+//
+//        assertEquals("Restaurant: mac \n" +
+//                " rating : 2.0 \n" +
+//                " price category: low$",note);
+//
+//    }
+
+
+    @Test void testShop(){
+        Shop place = new Shop("gichi","$$$");
+
+
+        place.addReview("good","abdallah",4);
+        String note = place.toString();
+        System.out.println(note);
+
+        assertEquals("Shop: gichi \n" +
+                " Number of reviews = 1 \n" +
+                " price category: $$$$",note);
+    }
+
+    @Test void testTheater(){
+
+        ArrayList<String> passingThis =  new ArrayList<>();
+        Theater place = new Theater("abdallah",passingThis);
+        place.addMovie("movie1");
+        place.addMovie("movie2");
+
+        place.addReview("good","abdallah",4);
+        String note = place.toString();
+        System.out.println(note);
+
+        assertEquals("Theater: downtown cinema \n" +
+                " rating : 7.0 Number of reviews = 1 \n" +
+                " price category: mid$ \n" +
+                "Showing Know:  [movie1, movie2]",note);
+
+
+        place.removeMovie("movie2");
+        String note2 = place.toString();
+        System.out.println(note2);
+
+        assertEquals("Theater: downtown cinema \n" +
+                " rating : 7.0 Number of reviews = 1 \n" +
+                " price category: mid$ \n" +
+                "Showing Know:  [movie1]",note2);
 
     }
+
 }
