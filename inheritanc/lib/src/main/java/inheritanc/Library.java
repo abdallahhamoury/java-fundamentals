@@ -7,19 +7,25 @@ import java.util.ArrayList;
 public class Library {
     public static void main(String[] args){
         Restaurant mcDonalds = new Restaurant("mcDonalds",3,"$");
-        Review comments = new Review("amazing" , "abdallah" ,3);
+        Review comments = new Review("amazing" , "abdallah" ,5);
         System.out.println(comments.toString());
         mcDonalds.addReview(comments);
         System.out.println(mcDonalds.toString());
         System.out.println(mcDonalds.toString());
 
         Shop handm = new Shop("hsndm","$$$");
+        Review comments2 = new Review("amazing" , "abdallah" ,5);
+        Review comments3= new Review("amazing" , "abdallah" ,3);
+        handm.addReview(comments2);
+        handm.addReview(comments3);
         System.out.println(handm.toString());
         ArrayList myfav = new ArrayList();
         myfav.add("faceoff");
         myfav.add("lolo");
         Theater preafhard = new Theater("aboali",myfav);
-        preafhard.addReview("so waw","abdallah",5);
+        Review comments4= new Review("amazing" , "abdallah" ,3);
+        preafhard.addReview(comments4);
+        preafhard.addReview("so waw","abdallah",5,"hello");
         System.out.println(preafhard.toString());
     }
 }

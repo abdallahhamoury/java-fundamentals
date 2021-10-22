@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Theater {
    private String name;
-
+private int rate;
     private ArrayList<Review> reviewList = new ArrayList<>();
     private ArrayList<String> movieList;
 
@@ -21,6 +21,14 @@ public class Theater {
                 ", movieList=" + movieList +
                 '}';
         return output;
+    }
+
+    public int getRate() {
+        return rate;
+    }
+
+    public void setRate(int rate) {
+        this.rate = rate;
     }
 
     public void addMovie(String x){
@@ -59,15 +67,26 @@ public class Theater {
         this.movieList = movieList;
     }
 
-    public void addReview(String body, String author, int numOfStars) {
-        Review review = new Review(body,author,numOfStars);
+    public int addReview(Review review) {
         reviewList.add(review);
+        if (this.rate==0) {
+            this.rate = ( review.getStar());
+        }else{
+            this.rate = (this.rate + review.getStar()) / (reviewList.size() + 1);
+        }
+        return this.rate;
     }
 
 
-    public void addReview(String body,String author,int numOfStars, String Movie) {
+    public int addReview(String body,String author,int numOfStars, String Movie) {
         Review review = new Review(body,author,numOfStars, Movie);
         reviewList.add(review);
+        if (this.rate==0) {
+            this.rate = ( review.getStar());
+        }else{
+            this.rate = (this.rate + review.getStar()) / (reviewList.size() + 1);
+        }
+        return this.rate;
     }
 
 }
