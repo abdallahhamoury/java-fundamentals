@@ -5,68 +5,51 @@ package basiclibrary;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
-import java.io.PrintStream;
 
 class LibraryTest {
-    // @Test void someLibraryMethodReturnsTrue() {
-    //     Library classUnderTest = new Library();
-    //     assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
-    // }
 
-    @Test public void testRoll() {
-        int [] rollResult = Library.roll(5);
-        assertEquals( 5, rollResult.length);
+    @Test
+    public  void testroll() {
+        int rollsNumber = 4;
+        assertEquals(rollsNumber,Library.roll(rollsNumber).size());
+    }
+    @Test
+    public void averageTest() {
+        assertEquals(2.6, Library.calculatingAverages(new int[] {1,2,6,3,1}));
     }
 
-    @Test public void testContainsDuplicates() {
-        int [] array ={1,2,5,4,5,9,8,2,10};
-        assertTrue(Library.containsDuplicates(array));
+    @Test
+    public void containsDuplicates() {
+        assertTrue(Library.containsDuplicates(new int[] {1,2,6,3,1}));
     }
+    @Test
+    public void lowestAverage() {
 
-    @Test public void testCalcAverage() {
-        int [] array ={65, 56, 55, 52, 55, 62, 57};
-        assertTrue(Library.calculatingAverages(array) ==57.0);
+        assertArrayEquals(new int[] {55, 54, 60, 53, 59, 57, 61},
+                Library.lowestAverage(new int[][] {
+                        {66, 64, 58, 65, 71, 57, 60},
+                        {57, 65, 65, 70, 72, 65, 51},
+                        {55, 54, 60, 53, 59, 57, 61},
+                        {65, 56, 55, 52, 55, 62, 57}
+                }));
     }
-
-    @Test public void testArrayOfArrays() {
+    @Test
+    public void analyzingWeather(){
         int[][] weeklyMonthTemperatures = {
                 {66, 64, 58, 65, 71, 57, 60},
                 {57, 65, 65, 70, 72, 65, 51},
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
-
-        int [] array = weeklyMonthTemperatures[2];
-        int [] newArr = Library.arrayOfArrays(weeklyMonthTemperatures);
-        assertArrayEquals(array, newArr);
+        String value = "\nNever saw temperature: 63" +
+                "\nNever saw temperature: 67" +
+                "\nNever saw temperature: 68" +
+                "\nNever saw temperature: 69";
+        assertEquals(value,Library.analysisWeatherData(weeklyMonthTemperatures));
     }
-
-
-    @Test public void testAnalysisWeatherData() throws Exception {
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-
-        System.setOut(new PrintStream(outContent));
-        int[][] weeklyMonthTemperatures = {
-                {66, 64, 58, 65, 71, 57, 60},
-                {57, 65, 65, 70, 72, 65, 51},
-                {55, 54, 60, 53, 59, 57, 61},
-                {65, 56, 55, 52, 55, 62, 57}
-        };
-        Library.analysisWeatherData(weeklyMonthTemperatures);
-
-        String expectedOutput  = "High: 72\n" +
-                "Low: 51\n" +
-                "Never saw temperature: 63\n" +
-                "Never saw temperature: 67\n" +
-                "Never saw temperature: 68\n" +
-                "Never saw temperature: 69\n";
-
-        assertEquals(expectedOutput,outContent.toString());
-    }
-
-    @Test public void testTally(){
+    @Test
+    public void tally(){
         ArrayList<String> votes = new ArrayList<>();
         votes.add("Bush");
         votes.add("Bush");
@@ -77,7 +60,7 @@ class LibraryTest {
         votes.add("Bush");
         votes.add("Hedge");
         votes.add("Bush");
-        assertEquals("Bush",Library.tally(votes),"the winner is bush");
+        assertEquals("Bush",Library.tally(votes));
 
     }
 }
