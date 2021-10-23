@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ce53bf43-8e83-4a2f-887f-9e038d7b3bc7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/inheritanc/lib/src/main/java/inheritanc/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/lib/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Library.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Restaurant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/lib/src/main/java/inheritance/Review.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/lib/src/test/java/inheritance/LibraryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,5 +53,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
