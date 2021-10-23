@@ -36,18 +36,22 @@ public class Review {
     }
 
     public void setStar(int star) {
-        this.star = star;
+        if ( star>=0 && star<=5) {
+            this.star = star;
+        }else {
+            System.out.println("the star should be between 0 and 5 ");
+        }
     }
 
     public Review(String body, String author, int star){
         this.body = body;
         this.author =author;
-        this.star = star;
+        this.setStar(star);
     }
     public Review(String body, String author, int star,String movie){
         this.body = body;
         this.author =author;
-        this.star = star;
+        this.setStar(star);
         this.movie= movie;
     }
     public String toString(){

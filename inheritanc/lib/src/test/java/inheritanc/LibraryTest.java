@@ -8,62 +8,44 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 
 class LibraryTest {
-//    @Test void testResToString() {
-//        Restaurant r1 = new Restaurant("mac",5,"low");
-//        System.out.println(r1.toString());
-//        String note = r1.toString();
-//        assertEquals("Restaurant: mac \n" +
-//                " rating : 5.0 \n" +
-//                " price category: low$",note);
-//    }
-//
-//
-//    @Test void testReviewToString() {
-//        Review r1 = new Review("bad","malik",2);
-//        System.out.println(r1.toString());
-//        String note = r1.toString();
-//        assertEquals("rating : bad \n" +
-//                " Clint name: abdallah \n" +
-//                " rating with stars is : 2",note);
-//
-//
-//
-//    }
+    @Test void testResToString() {
+        Restaurant r1 = new Restaurant("mac",5,"$$");
+        System.out.println(r1.toString());
+        String note = r1.toString();
+        assertEquals(" Resturant mac start 5 price category $$ []",note);
+    }
 
-//    @Test void testAssociated() {
-//        Restaurant r1 = new Restaurant("bad", 5, "high");
-//        r1.addReview("good","mazen",5);
-//        r1.addReview("bad","majed",1);
-//        r1.reviewList.toString();
-//    }
-//
-//
-//    @Test void testAddReview(){
-//        Restaurant r1 = new Restaurant("mac",0,"low");
-//        Review r2 = new Review("good","abdallah",4);
-//
-//        r1.addReview("good","abd",4);
-//        String note =r1.toString();
-//        System.out.println(note);
-//
-//        assertEquals("Restaurant: mac \n" +
-//                " rating : 2.0 \n" +
-//                " price category: low$",note);
-//
-//    }
+
+    @Test void testReviewToString() {
+        Review rev1 = new Review("bad","Abdallah",2);
+        String note = rev1.toString();
+        assertEquals(" comments : bad /  name : Abdallah start * 2",note);
+
+
+
+    }
+    @Test void testAddReview(){
+        Restaurant r1 = new Restaurant("mac",0,"low");
+        Review rev1 = new Review("bad","Abdallah",2);
+        Review rev2 = new Review("well","ahmad",3);
+
+        r1.addReview(rev1);
+        r1.addReview(rev2);
+        String note =r1.toString();
+        assertEquals(" Resturant mac start 1 price category low [ comments : bad /  name : Abdallah start * 2,  comments : well /  name : ahmad start * 3]",note);
+
+    }
 
 
     @Test void testShop(){
         Shop place = new Shop("gichi","$$$");
 
 
-        place.addReview("good","abdallah",4);
+//        place.addReview("good","abdallah",4);
         String note = place.toString();
         System.out.println(note);
 
-        assertEquals("Shop: gichi \n" +
-                " Number of reviews = 1 \n" +
-                " price category: $$$$",note);
+        assertEquals("Shop: gichi  Rate depend on reviews = 0  price category: $$$ ",note);
     }
 
     @Test void testTheater(){
@@ -73,24 +55,18 @@ class LibraryTest {
         place.addMovie("movie1");
         place.addMovie("movie2");
 
-        place.addReview("good","abdallah",4);
+        place.addReview("good","abdallah",4,"wow");
         String note = place.toString();
-        System.out.println(note);
 
-        assertEquals("Theater: downtown cinema \n" +
-                " rating : 7.0 Number of reviews = 1 \n" +
-                " price category: mid$ \n" +
-                "Showing Know:  [movie1, movie2]",note);
+
+        assertEquals("Theater{name='abdallah', reviewList=[ comments : good /  name : abdallah start * 4], movieList=[movie1, movie2]}",note);
 
 
         place.removeMovie("movie2");
         String note2 = place.toString();
-        System.out.println(note2);
 
-        assertEquals("Theater: downtown cinema \n" +
-                " rating : 7.0 Number of reviews = 1 \n" +
-                " price category: mid$ \n" +
-                "Showing Know:  [movie1]",note2);
+
+        assertEquals("Theater{name='abdallah', reviewList=[ comments : good /  name : abdallah start * 4], movieList=[movie1]}",note2);
 
     }
 
